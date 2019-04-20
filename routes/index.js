@@ -22,6 +22,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/test', function(req, res, next) {
   process.exit(1);
+  
 });
 
 module.exports = router;
