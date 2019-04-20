@@ -10,9 +10,6 @@ var nconf = require('nconf');
 nconf.file({ file: process.argv[2] || './dev-config.json' });
 
 router.get('/', function(req, res, next) {
-  
-  return process.exit(1);
-  
   res.render('index', {
     title: nconf.get('title'),
     message: nconf.get('message'),
@@ -21,8 +18,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/test', function(req, res, next) {
-  process.exit(1);
-  
+  return 'hello world';
 });
 
 module.exports = router;
